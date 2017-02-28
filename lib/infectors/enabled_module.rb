@@ -22,7 +22,7 @@ module Scrumbler
 
       module InstanceMethods
         def enable_module
-          if self.name == Scrumbler::MODULE_NAME
+          if self.name == :scrumbler
             unless self.project.scrumbler_project_setting
               self.project.create_scrumbler_project_setting
               ScrumblerIssueCustomField.points.projects << self.project
@@ -32,7 +32,7 @@ module Scrumbler
         end
         
         def disable_module
-          if self.name == Scrumbler::MODULE_NAME
+          if self.name == :scrumbler
             self.project.scrumbler_sprints.destroy_all
             self.project.scrumbler_project_setting.try(:destroy)
             ScrumblerIssueCustomField.points.projects.delete(self.project)
