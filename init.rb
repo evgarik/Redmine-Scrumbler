@@ -17,7 +17,7 @@
 require 'sqlite_3_serialization_hack'
 # require 'redmine'
 
-# require_dependency "scrumbler"
+require_dependency "scrumbler"
 
 # Rails.application.config.to_prepare do
 #   require_dependency "scrumbler_infector"
