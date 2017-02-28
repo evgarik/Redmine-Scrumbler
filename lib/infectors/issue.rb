@@ -71,7 +71,7 @@ module Scrumbler
           end
         }
         receiver.extend         ClassMethods
-        receiver.send :include, InstanceMethods
+        receiver.send :included, InstanceMethods
         receiver.class_eval {
           validate :validate_sprint
           scope :without_version, :where => {:fixed_version_id => nil}

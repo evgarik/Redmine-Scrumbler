@@ -23,7 +23,7 @@ Rails.application.config.to_prepare do
   require_dependency "scrumbler_infector"
 end
 
-Redmine::Plugin.register Scrumbler::MODULE_NAME do
+Redmine::Plugin.register :scrumbler do
   name 'Redmine Scrumbler plugin'
   url 'https://github.com/256MbTeam/Redmine-Scrumbler/'
   author 'Alexandr_Andrianov, Ivan Kotenko'
