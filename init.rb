@@ -15,13 +15,13 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 require 'sqlite_3_serialization_hack'
-require 'redmine'
+# require 'redmine'
 
-require_dependency "scrumbler"
+# require_dependency "scrumbler"
 
-Rails.application.config.to_prepare do
-  require_dependency "scrumbler_infector"
-end
+# Rails.application.config.to_prepare do
+#   require_dependency "scrumbler_infector"
+# end
 
 Redmine::Plugin.register :scrumbler do
   name 'Redmine Scrumbler plugin'
